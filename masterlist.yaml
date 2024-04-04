@@ -2007,6 +2007,21 @@ plugins:
         subs: [ '**KFE - Refill Water Bottles.esp**' ]
         condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
 
+  - name: 'ROOGNV.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/76452/'
+        name: 'ROOG FNV'
+    req:
+      - *JIPLN
+      - 'WeaponRepairKitRepaired.esp'
+    tag:
+      - C.Encounter
+      - Names
+      - Stats
+    clean:
+      - crc: 0xB1614D75
+        util: 'FNVEdit v4.0.4c'
+
 ###### Gameplay - Combat ######
   - name: 'BLEED.esp'
     url:
