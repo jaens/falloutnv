@@ -1059,13 +1059,12 @@ plugins:
         subs: [ '**NavmeshOverhaul.esm**' ]
         condition: 'active("NavmeshOverhaul.esm")'
 
-  - name: 'NavmeshOverhaul.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/81003' ]
+  - name: '(NavmeshOverhaul|YUPNavmeshPatch)\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/81003/'
+        name: 'Improved AI (Navmesh Overhaul Mod)'
     group: *fixesGroup
-
   - name: 'YUPNavmeshPatch.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/81003' ]
-    group: *fixesGroup
     inc:
       - name: 'Uncut Wasteland.esm'
         detail: &checkScript "It is incompatible according to the author's error check script. Follow [the guide](https://www.nexusmods.com/newvegas/mods/81003)."
