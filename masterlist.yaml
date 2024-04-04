@@ -1082,7 +1082,6 @@ plugins:
       - <<: *compatIssuesWithX
         subs: [ 'Uncut Wasteland' ]
         condition: 'active("Uncut Wasteland.esm")'
-  - name: 'YUPNavmeshPatch.esm'
     dirty:
       - <<: *quickClean
         crc: 0x8D7FEFA6
