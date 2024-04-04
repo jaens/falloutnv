@@ -1064,6 +1064,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/81003/'
         name: 'Improved AI (Navmesh Overhaul Mod)'
     group: *fixesGroup
+  - name: 'NavmeshOverhaul.esm'
+    clean:
+      - crc: 0xD72C3602
+        util: 'FNVEdit v4.1.5d'
   - name: 'YUPNavmeshPatch.esm'
     msg:
       - <<: *compatIssuesWithX
@@ -1078,6 +1082,12 @@ plugins:
       - <<: *compatIssuesWithX
         subs: [ 'Uncut Wasteland' ]
         condition: 'active("Uncut Wasteland.esm")'
+  - name: 'YUPNavmeshPatch.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x8D7FEFA6
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3448
 
   - name: 'RepairKitFix.esp'
     url:
