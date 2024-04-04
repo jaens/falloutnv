@@ -1065,15 +1065,19 @@ plugins:
         name: 'Improved AI (Navmesh Overhaul Mod)'
     group: *fixesGroup
   - name: 'YUPNavmeshPatch.esm'
-    inc:
-      - name: 'Uncut Wasteland.esm'
-        detail: &checkScript "It is incompatible according to the author's error check script. Follow [the guide](https://www.nexusmods.com/newvegas/mods/81003)."
-      - name: "Vanilla Enhancements.esm"
-        detail: *checkScript
-      - name: "TLD_Travelers.esm"
-        detail: *checkScript
-      - name: "Functional Post Game Ending.esm"
-        detail: *checkScript
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ 'Essential Vanilla Enhancements Merged' ]
+        condition: 'active("Vanilla Enhancements.esm")'
+      - <<: *compatIssuesWithX
+        subs: [ 'Functional Post Game Ending' ]
+        condition: 'active("Functional Post Game Ending.esm")'
+      - <<: *compatIssuesWithX
+        subs: [ 'The Living Desert - Travelers Patrols Consequences' ]
+        condition: 'active("TLD_Travelers.esm")'
+      - <<: *compatIssuesWithX
+        subs: [ 'Uncut Wasteland' ]
+        condition: 'active("Uncut Wasteland.esm")'
 
   - name: 'RepairKitFix.esp'
     url:
